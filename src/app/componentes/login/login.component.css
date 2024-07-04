@@ -1,0 +1,53 @@
+  #login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../../assets/imagenes/fondo.jpg);
+    background-size: cover;
+  }
+
+  .contorno{
+    padding: 20px;
+    border: 2px rgb(165, 175, 168);
+    border-style: solid;
+    background-color: rgba(255, 255, 240, 0.326);
+    border-radius: 15px;
+  }
+  
+  #login .contorno .imagen {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #login .contorno .imagen img {
+    padding: 10px;
+  }
+
+  #login .contorno .login-form {
+    max-width: 300px;
+  }
+
+  #login .contorno form .ant-input-group>.ant-input:first-child{
+    border-radius: 7px;
+    background-color: rgba(240, 248, 255, 0.92);
+  }
+
+  #login .contorno form .ant-input-affix-wrapper>input.ant-input {
+    background-color: rgba(240, 248, 255, 0.819);
+
+  }
+
+  #login .contorno .login-form-margin {
+    margin-bottom: 16px;
+  }
+
+  #login .contorno .login-form-forgot {
+    float: right;
+  }
+
+  #login .contorno .login-form-button {
+    width: 100%;
+  }

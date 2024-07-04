@@ -1,0 +1,179 @@
+<section id="inicio">
+    <h1>COOL SYSTEM</h1>
+    <div id="container">
+        <div class="container-form">
+            <div class="form">
+                <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+                    <!-- Nombres completos -->
+                    <nz-form-item>
+                        <nz-form-label [nzSpan]="7" >Nombres completos</nz-form-label>
+                        <nz-form-control [nzSpan]="18" nzHasFeedback nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl">
+                            <input nz-input formControlName="name" placeholder="Nombres completos" />
+                            <ng-template #userErrorTpl let-control>
+                            <!-- @if (control.errors?.['required']) {
+                                Please input your username!
+                            }
+                            @if (control.errors?.['duplicated']) {
+                                The username is redundant!
+                            } -->
+                            </ng-template>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <!-- Direccion -->
+                    <nz-form-item>
+                        <nz-form-label [nzSpan]="7" >Dirección</nz-form-label>
+                        <nz-form-control [nzSpan]="18" nzHasFeedback nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl">
+                            <input nz-input formControlName="address" placeholder="Dirección" />
+                            <ng-template #userErrorTpl let-control>
+                            <!-- @if (control.errors?.['required']) {
+                                Please input your username!
+                            }
+                            @if (control.errors?.['duplicated']) {
+                                The username is redundant!
+                            } -->
+                            </ng-template>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <!-- Tipo de producto -->
+                    <nz-form-item>
+                        <nz-form-label [nzSpan]="7" >Tipo de producto</nz-form-label>
+                        <nz-form-control [nzSpan]="18" nzHasFeedback nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl">
+                            <input nz-input formControlName="productType" placeholder="Tipo de producto" />
+                            <ng-template #userErrorTpl let-control>
+                            <!-- @if (control.errors?.['required']) {
+                                Please input your username!
+                            }
+                            @if (control.errors?.['duplicated']) {
+                                The username is redundant!
+                            } -->
+                            </ng-template>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <!-- Correo -->
+                    <nz-form-item>
+                        <nz-form-label [nzSpan]="7" >Correo</nz-form-label>
+                        <nz-form-control [nzSpan]="18" nzHasFeedback [nzErrorTip]="emailErrorTpl">
+                            <input nz-input formControlName="email" placeholder="Correo" type="email" />
+                            <ng-template #emailErrorTpl let-control>
+                            <!-- @if (control.errors?.['email']) {
+                                The input is not valid E-mail!
+                            }
+                            @if (control.errors?.['required']) {
+                                Please input your E-mail!
+                            } -->
+                            </ng-template>
+                        </nz-form-control>
+                    </nz-form-item>
+
+
+                    <!-- Garantía -->
+                    <nz-form-item>
+                        <nz-form-label [nzSpan]="7" >Grantía</nz-form-label>
+                        <nz-form-control [nzSpan]="18" nzHasFeedback nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl">
+                            <input nz-input formControlName="garantia" placeholder="Grantía" />
+                            <ng-template #userErrorTpl let-control>
+                            <!-- @if (control.errors?.['required']) {
+                                Please input your username!
+                            }
+                            @if (control.errors?.['duplicated']) {
+                                The username is redundant!
+                            } -->
+                            </ng-template>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <!-- Tiempo de compra -->
+                    <nz-form-item>
+                        <nz-form-label [nzSpan]="7" >Tiempo de compra</nz-form-label>
+                        <nz-form-control [nzSpan]="18" nzHasFeedback nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl">
+                            <input nz-input formControlName="time" placeholder="Tiempo de compra" />
+                            <ng-template #userErrorTpl let-control>
+                            <!-- @if (control.errors?.['required']) {
+                                Please input your username!
+                            }
+                            @if (control.errors?.['duplicated']) {
+                                The username is redundant!
+                            } -->
+                            </ng-template>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <!-- Marca -->
+                    <nz-form-item>
+                        <nz-form-label [nzSpan]="7" >Marca</nz-form-label>
+                        <nz-form-control [nzSpan]="18" nzHasFeedback nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl">
+                            <input nz-input formControlName="marca" placeholder="Marca" />
+                            <ng-template #userErrorTpl let-control>
+                            <!-- @if (control.errors?.['required']) {
+                                Please input your username!
+                            }
+                            @if (control.errors?.['duplicated']) {
+                                The username is redundant!
+                            } -->
+                            </ng-template>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <!-- Número de contacto -->
+                    <nz-form-item>
+                        <nz-form-label [nzSpan]="7" >Número de contacto</nz-form-label>
+                        <nz-form-control [nzSpan]="18" nzHasFeedback nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl">
+                            <input nz-input formControlName="number" placeholder="Número de contacto" />
+                            <ng-template #userErrorTpl let-control>
+                            <!-- @if (control.errors?.['required']) {
+                                Please input your username!
+                            }
+                            @if (control.errors?.['duplicated']) {
+                                The username is redundant!
+                            } -->
+                            </ng-template>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <!-- <nz-form-item>
+                    <nz-form-label [nzSpan]="7" >Password</nz-form-label>
+                    <nz-form-control [nzSpan]="18" nzHasFeedback nzErrorTip="Please input your password!">
+                        <input nz-input type="password" formControlName="password" (ngModelChange)="validateConfirmPassword()" />
+                    </nz-form-control>
+                    </nz-form-item>
+
+                    <nz-form-item>
+                    <nz-form-label [nzSpan]="7" >Confirm Password</nz-form-label>
+                    <nz-form-control [nzSpan]="18" nzHasFeedback [nzErrorTip]="passwordErrorTpl">
+                        <input nz-input type="password" formControlName="confirm" placeholder="confirm your password" />
+                        <ng-template #passwordErrorTpl let-control>
+                        @if (control.errors?.['required']) {
+                            Please confirm your password!
+                        }
+                        @if (control.errors?.['confirm']) {
+                            Password is inconsistent!
+                        } 
+                        </ng-template>
+                    </nz-form-control>
+                    </nz-form-item> 
+                    -->
+
+                    <!-- Daño -->
+                    <nz-form-item>
+                    <nz-form-label [nzSpan]="7" >Daño</nz-form-label>
+                    <nz-form-control [nzSpan]="18" nzHasFeedback nzErrorTip="Please write something here!">
+                        <nz-textarea-count [nzMaxCharacterCount]="1800">
+                        <textarea formControlName="danio" nz-input rows="4" placeholder="Describe el daño de tu producto"></textarea>
+                        </nz-textarea-count>
+                    </nz-form-control>
+                    </nz-form-item>
+
+                    <nz-form-item>
+                        <nz-form-control style="text-align: center;" [nzSpan]="24">
+                            <button nz-button nzType="primary" [disabled]="!validateForm.valid">Enviar</button>
+                            <!-- <button nz-button (click)="resetForm($event)">Resetear</button>  -->
+                        </nz-form-control>
+                    </nz-form-item>
+                </form>              
+            </div>
+        </div>
+    </div>
+</section>
